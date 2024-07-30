@@ -64,7 +64,7 @@ def main():
         #st.write("Swimmer Split Times DataFrame with Calculated Variables:")
         #st.write(df)
 
-        model_path = 'msaved_rf_model_joblib.pkl'  # Update this path as needed
+        model_path = 'random_forest_regressor.joblib'  # Update this path as needed
         model = joblib.load(model_path)
 
         selected_features_new = ["mean_time", "1000T", "mean_speed", "800m_speed", "850m", "950m", "850m_speed", "800m", "950m_speed", "1250T"]
