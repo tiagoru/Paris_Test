@@ -52,7 +52,7 @@ def manipulate_data(df):
     return df
 
 def main():
-    st.title("Swimmer Split Time Input - author: Tiago Russomanno")
+    st.title("Swimmer Split Time Input for the 1500m - author: Tiago Russomanno after entering all the values, click on the Submit button to get the prediction")
 
     num_splits = 30
 
@@ -64,7 +64,7 @@ def main():
         #st.write("Swimmer Split Times DataFrame with Calculated Variables:")
         #st.write(df)
 
-        model_path = 'saved_rf_model.pkl'  # Update this path as needed
+        model_path = 'msaved_rf_model_joblib.pkl'  # Update this path as needed
         model = joblib.load(model_path)
 
         selected_features_new = ["mean_time", "1000T", "mean_speed", "800m_speed", "850m", "950m", "850m_speed", "800m", "950m_speed", "1250T"]
