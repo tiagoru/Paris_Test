@@ -3,9 +3,14 @@ import pandas as pd
 import joblib
 import os
 
+st.write("""
+This is a Test version to predict the final time of the 1500m, based on the qualifying split times.
+The user needs to manually include the 30 split times and submit, and the model will predict the final time for this swimmer.
+This work is still in development; this is just a test prototype. 30.07.2024 ---to be tested for the Paris 2024 games.
+""")
 def input_swimmer_data_streamlit(num_splits):
     data = []
-    st.write("Swimmer 1")
+    st.title("Swimmer Split Time Input for the 1500m - author: Tiago Russomanno")
     swimmer_data = []
     for split in range(1, num_splits + 1):
         key = f"split_{split}"
@@ -52,7 +57,7 @@ def manipulate_data(df):
     return df
 
 def main():
-    st.title("Swimmer Split Time Input for the 1500m - author: Tiago Russomanno after entering all the values, click on the Submit button to get the prediction")
+    st.title("Swimmers Data")
 
     num_splits = 30
 
